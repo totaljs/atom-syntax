@@ -1,0 +1,29 @@
+'fileTypes': [
+    'config'
+    'config-release'
+    'config-debug'
+    'resource'
+    'package'
+]
+'name': 'Total.js resources'
+'patterns': [
+    {
+        'include': '#comment'
+    }
+    {
+        'include': '#string'
+    }
+]
+'repository':
+    'comment':
+        'captures':
+            '1':
+                'name': 'comment.total-config'
+        'match': '((\/\/).*$\\n?)'
+    'string':
+        'captures':
+            '1':
+                'name': 'string.total-config'
+        'match': '(^.*?:)'
+
+'scopeName': 'text.total-config'

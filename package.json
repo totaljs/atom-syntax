@@ -1,0 +1,29 @@
+{
+  "name": "language-totaljs",
+  "author": {
+    "name": "Peter Širka",
+    "email": "petersirka@gmail.com"
+  },
+  "version": "1.0.0",
+  "description": "Total.js syntax highlighting",
+  "keywords": [
+    "total.js"
+    "view engine"
+    "configuration"
+    "resources"
+    "packages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totaljs/atom-syntax.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.196.0 <2.0.0"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/totaljs/atom-syntax/issues"
+  },
+  "homepage": "http://www.totajs.com",
+}

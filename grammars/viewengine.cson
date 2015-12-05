@@ -1,0 +1,16 @@
+'fileTypes': [
+  'html'
+]
+'name': 'Total.js View Engine'
+'patterns': [
+
+  {
+    'begin': '@\{'
+    'end': '\}'
+    'name': 'entity.name.function.totaljs'
+  }
+  {
+    'include': 'text.html.basic'
+  }
+]
+'scopeName': 'text.html.totaljs'
