@@ -1,29 +1,32 @@
 'fileTypes': [
-    'config'
-    'config-release'
-    'config-debug'
-    'resource'
-    'package'
+	'config'
+	'config-release'
+	'config-debug'
+	'resource'
+	'package'
+	'versions'
+	'sitemap'
+	'dependencies'
 ]
-'name': 'Total.js resources'
+'name': 'Total.js Resources'
 'patterns': [
-    {
-        'include': '#comment'
-    }
-    {
-        'include': '#string'
-    }
+	{
+		'include': '#comment'
+	}
+	{
+		'include': '#string'
+	}
 ]
 'repository':
-    'comment':
-        'captures':
-            '1':
-                'name': 'comment.total-config'
-        'match': '((\/\/).*$\\n?)'
-    'string':
-        'captures':
-            '1':
-                'name': 'string.total-config'
-        'match': '(^.*?:)'
+	'comment':
+		'captures':
+			'1':
+				'name': 'comment.total-config'
+		'match': '((\/\/).*$\\n?)'
+	'string':
+		'captures':
+			'1':
+				'name': 'string.total-config'
+		'match': '(^.*?(:|\-\-\>))'
 
 'scopeName': 'text.total-config'

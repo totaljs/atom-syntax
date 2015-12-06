@@ -4,13 +4,23 @@
 'name': 'Total.js View Engine'
 'patterns': [
 
+  ## Functions
   {
-    'begin': '@\{'
-    'end': '\}'
+    'begin': '@\\{'
+    'end': '\\}'
     'name': 'entity.name.function.totaljs'
   }
+
+  ## Localization
+  {
+    'begin': '@\\('
+    'end': '\\)'
+    'name': 'keyword.control.totaljs'
+  }
+
   {
     'include': 'text.html.basic'
   }
+
 ]
 'scopeName': 'text.html.totaljs'

@@ -1,7 +1,7 @@
 {
   "name": "language-totaljs",
-  "version": "0.1.1",
-  "description": "Total.js syntax highlighting",
+  "version": "v0.1.2",
+  "description": "Total.js Syntax Highlighting",
   "repository": {
 	"type": "git",
 	"url": "https://github.com/totaljs/atom-syntax.git"
