@@ -1,22 +1,22 @@
 {
   "name": "language-totaljs",
-  "version": "v0.2.0",
+  "version": "1.0.0",
   "description": "Total.js Syntax Highlighting and Snippets",
   "repository": {
-	"type": "git",
-	"url": "https://github.com/totaljs/atom-syntax.git"
+    "type": "git",
+    "url": "https://github.com/totaljs/atom-syntax.git"
   },
   "bugs": {
-	"url": "https://github.com/totaljs/atom-syntax/issues"
+    "url": "https://github.com/totaljs/atom-syntax/issues"
   },
   "keywords": [
-	"language",
-	"totaljs",
-	"total.js",
-	"total js"
+    "language",
+    "totaljs",
+    "total.js",
+    "total js"
   ],
   "license": "MIT",
   "engines": {
-	"atom": "*"
+    "atom": "*"
   }
 }
