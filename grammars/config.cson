@@ -6,6 +6,7 @@
 	'package'
 	'versions'
 	'sitemap'
+	'workflow'
 	'dependencies'
 ]
 'name': 'Total.js Resources'

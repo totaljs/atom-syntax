@@ -1,0 +1,37 @@
+'.source.js':
+     'schema.addWorkflow()':
+        'prefix': 'addWorkflow'
+        'body': 'schema.addWorkflow(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+     'schema.addTransform()':
+        'prefix': 'addTransform'
+        'body': 'schema.addTransform(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+     'schema.addOperation()':
+        'prefix': 'addOperation'
+        'body': 'schema.addOperation(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+     'schema.addHook()':
+        'prefix': 'addHook'
+        'body': 'schema.addHook(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+     'schema.setSave()':
+        'prefix': 'setSave'
+        'body': 'schema.setSave(function(error, model, options, callback, controller) {\n\t$1\n\tcallback(SUCCESS(true));\n});'
+     'schema.setQuery()':
+        'prefix': 'setQuery'
+        'body': 'schema.setQuery(function(error, options, callback, controller) {\n\t$1\n\tcallback([]);\n});'
+     'schema.setGet()':
+        'prefix': 'setGet'
+        'body': 'schema.setGet(function(error, model, options, callback, controller) {\n\t$1\n\tcallback();\n});'
+     'schema.setRemove()':
+        'prefix': 'setRemove'
+        'body': 'schema.setGet(function(error, options, callback, controller) {\n\t$1\n\tcallback(SUCCESS(true));\n});'
+     'schema.define()':
+        'prefix': 'define'
+        'body': 'schema.define(\'$1\', $2);'
+    'jComponent':
+        'prefix': 'COMPONENT'
+        'body': 'COMPONENT(\'$\', function() {\n\tvar self = this;\n\n\t;self.readonly();\n});'
+
+'.source.html':
+    'jComponent':
+        'prefix': 'jc'
+        'body': 'data-jc="$1" data-jc-path="$2"'
+		

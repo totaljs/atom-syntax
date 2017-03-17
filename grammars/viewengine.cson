@@ -1,26 +1,42 @@
 'fileTypes': [
   'html'
 ]
+
+'scopeName': 'text.html.totaljs'
 'name': 'Total.js View Engine'
+
+'injections':
+  'text.html.totaljs - (meta.embedded | meta.tag), L:text.html.totaljs meta.tag, L:source.js.embedded.html':
+
+    'patterns': [
+
+      ## Functions
+      {
+        'begin': '@\\{'
+        'end': '\\}'
+        'name': 'entity.name.function.totaljs'
+      }
+
+      ## Localization
+      {
+        'begin': '@\\('
+        'end': '\\)'
+        'name': 'support.function.script.html'
+      }
+
+       ## Tangular
+       {
+        'begin': '\\{\\{'
+        'end': '\\}\\}'
+        'name': 'keyword.control.totaljs'
+      }
+
+      {
+        'include': 'text.html.basic'
+      }
+    ]
 'patterns': [
-
-  ## Functions
-  {
-    'begin': '@\\{'
-    'end': '\\}'
-    'name': 'entity.name.function.totaljs'
-  }
-
-  ## Localization
-  {
-    'begin': '@\\('
-    'end': '\\)'
-    'name': 'keyword.control.totaljs'
-  }
-
   {
     'include': 'text.html.basic'
   }
-
 ]
-'scopeName': 'text.html.totaljs'
