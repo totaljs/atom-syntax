@@ -1,37 +1,48 @@
 '.source.js':
      'schema.addWorkflow()':
         'prefix': 'addWorkflow'
-        'body': 'schema.addWorkflow(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+        'body': 'schema.addWorkflow(\'${1:name}\', function($) {\n\t$2\n\t$.success(true);\n});'
      'schema.addTransform()':
         'prefix': 'addTransform'
-        'body': 'schema.addTransform(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+        'body': 'schema.addTransform(\'${1:name}\', function($) {\n\t$2\n\t$.success(true);\n});'
      'schema.addOperation()':
         'prefix': 'addOperation'
-        'body': 'schema.addOperation(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+        'body': 'schema.addOperation(\'${1:name}\', function($) {\n\t$2\n\t$.success(true);\n});'
      'schema.addHook()':
         'prefix': 'addHook'
-        'body': 'schema.addHook(\'${1:name}\', function(error, model, options, callback, controller) {\n\t$2\n\tcallback(SUCCESS(true));\n});'
+        'body': 'schema.addHook(\'${1:name}\', function($) {\n\t$2\n\t$.success(true);\n});'
      'schema.setSave()':
         'prefix': 'setSave'
-        'body': 'schema.setSave(function(error, model, options, callback, controller) {\n\t$1\n\tcallback(SUCCESS(true));\n});'
+        'body': 'schema.setSave(function($) {\n\t$1\n\t$.success(true);\n});'
      'schema.setQuery()':
         'prefix': 'setQuery'
-        'body': 'schema.setQuery(function(error, options, callback, controller) {\n\t$1\n\tcallback([]);\n});'
+        'body': 'schema.setQuery(function($) {\n\t$1\n\t$.callback([]);\n});'
      'schema.setGet()':
         'prefix': 'setGet'
-        'body': 'schema.setGet(function(error, model, options, callback, controller) {\n\t$1\n\tcallback();\n});'
+        'body': 'schema.setGet(function($) {\n\t$1\n\t$.callback();\n});'
      'schema.setRemove()':
         'prefix': 'setRemove'
-        'body': 'schema.setGet(function(error, options, callback, controller) {\n\t$1\n\tcallback(SUCCESS(true));\n});'
+        'body': 'schema.setRemove(function($) {\n\t$1\n\t$.success(true);\n});'
+     'schema.setInsert()':
+        'prefix': 'setInsert'
+        'body': 'schema.setInsert(function($) {\n\t$1\n\t$.success(true);\n});'
+     'schema.setUpdate()':
+        'prefix': 'setUpdate'
+        'body': 'schema.setUpdate(function($) {\n\t$1\n\t$.success(true);\n});'
      'schema.define()':
         'prefix': 'define'
         'body': 'schema.define(\'$1\', $2);'
     'jComponent':
         'prefix': 'COMPONENT'
-        'body': 'COMPONENT(\'$\', function() {\n\tvar self = this;\n\n\t;self.readonly();\n});'
+        'body': 'COMPONENT(\'$2\', \'$2\', function(self, config) {\n\tvar self = this;\n\n\t;self.readonly();\n});'
+    'Controller':
+        'prefix': 'expo'
+        'body': 'exports.install = function() {\n$1\n};'
+    'New schema':
+        'prefix': 'NEWSCHEMA'
+        'body': 'NEWSCHEMA(\'$1\').make(function(builder) {\n$2\n});'
 
 '.source.html':
     'jComponent':
         'prefix': 'jc'
-        'body': 'data-jc="$1" data-jc-path="$2"'
-		
+        'body': 'data-jc="$1__$2__$3__$4"'
